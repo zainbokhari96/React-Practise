@@ -3,9 +3,7 @@ import logo from "../logo.svg";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 import authContext from "../context/authContext";
-
 
 function Login() {
   const [email, setEmail] = useState("zain.ali@invozone.com");
@@ -95,17 +93,14 @@ function Login() {
     console.log("this is email", email);
     console.log("this is password", password);
 
-
-      user.setUser({
-        isLoggedIn : true,
-        name : 'Zain Ali Bokhari',
-        email : email
-      });
-
     // UPDATE CONTEXT OF AuthUser
-    
-    alert("User Logged In Successfully! ");
-    router('/employees');
+    user.setUser({
+      isLoggedIn: true,
+      name: "Zain Ali Bokhari",
+      email: email,
+    });
+
+    router("/employees");
   }
 }
 
