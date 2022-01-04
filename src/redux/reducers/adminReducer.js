@@ -11,7 +11,7 @@ const companyReducers = (state = initialState, { type, payload }) => {
         return item.id !== payload.id;
       });
       state.companies = deleteCompany;
-      return { ...state, deleteCompany };
+      return { ...state };
     default:
       return state;
   }
